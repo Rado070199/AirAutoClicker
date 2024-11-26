@@ -5,7 +5,7 @@
     "DigitOnOff": false,
     "LetterMark": "z",
     "LetterMilliseconds": 10000,
-    "LetterOnOff": false,
+    "LetterOnOff": true,
     "MouseButton": "Left",
     "MouseMilliseconds": 10000,
     "MouseOnOff": false,

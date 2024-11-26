@@ -37,17 +37,17 @@
             this.groupBoxMouse = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanelMouse = new System.Windows.Forms.TableLayoutPanel();
             this.labelMouseButton = new System.Windows.Forms.Label();
-            this.labelMouseClickType = new System.Windows.Forms.Label();
+            this.labelMouseMilliseconds = new System.Windows.Forms.Label();
             this.labelMouseOnOff = new System.Windows.Forms.Label();
             this.comboBoxMouseButton = new System.Windows.Forms.ComboBox();
-            this.comboBoxMouseClickType = new System.Windows.Forms.ComboBox();
             this.checkBoxMouseOnOff = new System.Windows.Forms.CheckBox();
+            this.textBoxMouseMilliseconds = new System.Windows.Forms.TextBox();
             this.groupBoxLetter = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanelMark = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelLetterOnOff = new System.Windows.Forms.Label();
-            this.textBoxMilliseconds = new System.Windows.Forms.TextBox();
+            this.textBoxLetterMilliseconds = new System.Windows.Forms.TextBox();
             this.comboBoxLetterMark = new System.Windows.Forms.ComboBox();
             this.checkBoxLetterOnOff = new System.Windows.Forms.CheckBox();
             this.groupBoxDigit = new System.Windows.Forms.GroupBox();
@@ -153,11 +153,11 @@
             this.tableLayoutPanelMouse.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanelMouse.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tableLayoutPanelMouse.Controls.Add(this.labelMouseButton, 0, 0);
-            this.tableLayoutPanelMouse.Controls.Add(this.labelMouseClickType, 0, 1);
+            this.tableLayoutPanelMouse.Controls.Add(this.labelMouseMilliseconds, 0, 1);
             this.tableLayoutPanelMouse.Controls.Add(this.labelMouseOnOff, 0, 2);
             this.tableLayoutPanelMouse.Controls.Add(this.comboBoxMouseButton, 1, 0);
-            this.tableLayoutPanelMouse.Controls.Add(this.comboBoxMouseClickType, 1, 1);
             this.tableLayoutPanelMouse.Controls.Add(this.checkBoxMouseOnOff, 1, 2);
+            this.tableLayoutPanelMouse.Controls.Add(this.textBoxMouseMilliseconds, 1, 1);
             this.tableLayoutPanelMouse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelMouse.Location = new System.Drawing.Point(3, 23);
             this.tableLayoutPanelMouse.Name = "tableLayoutPanelMouse";
@@ -165,6 +165,7 @@
             this.tableLayoutPanelMouse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanelMouse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanelMouse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelMouse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelMouse.Size = new System.Drawing.Size(973, 96);
             this.tableLayoutPanelMouse.TabIndex = 0;
             // 
@@ -178,14 +179,14 @@
             this.labelMouseButton.TabIndex = 0;
             this.labelMouseButton.Text = "Button";
             // 
-            // labelMouseClickType
+            // labelMouseMilliseconds
             // 
-            this.labelMouseClickType.AutoSize = true;
-            this.labelMouseClickType.Location = new System.Drawing.Point(3, 32);
-            this.labelMouseClickType.Name = "labelMouseClickType";
-            this.labelMouseClickType.Size = new System.Drawing.Size(73, 20);
-            this.labelMouseClickType.TabIndex = 1;
-            this.labelMouseClickType.Text = "Click type";
+            this.labelMouseMilliseconds.AutoSize = true;
+            this.labelMouseMilliseconds.Location = new System.Drawing.Point(3, 32);
+            this.labelMouseMilliseconds.Name = "labelMouseMilliseconds";
+            this.labelMouseMilliseconds.Size = new System.Drawing.Size(91, 20);
+            this.labelMouseMilliseconds.TabIndex = 1;
+            this.labelMouseMilliseconds.Text = "Milliseconds";
             // 
             // labelMouseOnOff
             // 
@@ -199,22 +200,19 @@
             // 
             // comboBoxMouseButton
             // 
+            this.comboBoxMouseButton.AutoCompleteCustomSource.AddRange(new string[] {
+            "Left",
+            "Right"});
             this.comboBoxMouseButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxMouseButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMouseButton.FormattingEnabled = true;
+            this.comboBoxMouseButton.Items.AddRange(new object[] {
+            "Left",
+            "Right"});
             this.comboBoxMouseButton.Location = new System.Drawing.Point(343, 3);
             this.comboBoxMouseButton.Name = "comboBoxMouseButton";
             this.comboBoxMouseButton.Size = new System.Drawing.Size(627, 28);
             this.comboBoxMouseButton.TabIndex = 3;
-            // 
-            // comboBoxMouseClickType
-            // 
-            this.comboBoxMouseClickType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxMouseClickType.FormattingEnabled = true;
-            this.comboBoxMouseClickType.Location = new System.Drawing.Point(343, 35);
-            this.comboBoxMouseClickType.Name = "comboBoxMouseClickType";
-            this.comboBoxMouseClickType.Size = new System.Drawing.Size(627, 28);
-            this.comboBoxMouseClickType.TabIndex = 4;
             // 
             // checkBoxMouseOnOff
             // 
@@ -225,6 +223,14 @@
             this.checkBoxMouseOnOff.Size = new System.Drawing.Size(627, 26);
             this.checkBoxMouseOnOff.TabIndex = 9;
             this.checkBoxMouseOnOff.UseVisualStyleBackColor = true;
+            // 
+            // textBoxMouseMilliseconds
+            // 
+            this.textBoxMouseMilliseconds.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxMouseMilliseconds.Location = new System.Drawing.Point(343, 35);
+            this.textBoxMouseMilliseconds.Name = "textBoxMouseMilliseconds";
+            this.textBoxMouseMilliseconds.Size = new System.Drawing.Size(627, 27);
+            this.textBoxMouseMilliseconds.TabIndex = 10;
             // 
             // groupBoxLetter
             // 
@@ -245,7 +251,7 @@
             this.tableLayoutPanelMark.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanelMark.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanelMark.Controls.Add(this.labelLetterOnOff, 0, 2);
-            this.tableLayoutPanelMark.Controls.Add(this.textBoxMilliseconds, 1, 1);
+            this.tableLayoutPanelMark.Controls.Add(this.textBoxLetterMilliseconds, 1, 1);
             this.tableLayoutPanelMark.Controls.Add(this.comboBoxLetterMark, 1, 0);
             this.tableLayoutPanelMark.Controls.Add(this.checkBoxLetterOnOff, 1, 2);
             this.tableLayoutPanelMark.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -286,19 +292,73 @@
             this.labelLetterOnOff.TabIndex = 7;
             this.labelLetterOnOff.Text = "On / Off";
             // 
-            // textBoxMilliseconds
+            // textBoxLetterMilliseconds
             // 
-            this.textBoxMilliseconds.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxMilliseconds.Location = new System.Drawing.Point(343, 34);
-            this.textBoxMilliseconds.Name = "textBoxMilliseconds";
-            this.textBoxMilliseconds.Size = new System.Drawing.Size(627, 27);
-            this.textBoxMilliseconds.TabIndex = 9;
+            this.textBoxLetterMilliseconds.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxLetterMilliseconds.Location = new System.Drawing.Point(343, 34);
+            this.textBoxLetterMilliseconds.Name = "textBoxLetterMilliseconds";
+            this.textBoxLetterMilliseconds.Size = new System.Drawing.Size(627, 27);
+            this.textBoxLetterMilliseconds.TabIndex = 9;
             // 
             // comboBoxLetterMark
             // 
+            this.comboBoxLetterMark.AutoCompleteCustomSource.AddRange(new string[] {
+            "q",
+            "w",
+            "e",
+            "r",
+            "t",
+            "y",
+            "u",
+            "i",
+            "o",
+            "p",
+            "a",
+            "s",
+            "d",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "l",
+            "z",
+            "x",
+            "c",
+            "v",
+            "b",
+            "n",
+            "m"});
             this.comboBoxLetterMark.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxLetterMark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLetterMark.FormattingEnabled = true;
+            this.comboBoxLetterMark.Items.AddRange(new object[] {
+            "q",
+            "w",
+            "e",
+            "r",
+            "t",
+            "y",
+            "u",
+            "i",
+            "o",
+            "p",
+            "a",
+            "s",
+            "d",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "l",
+            "z",
+            "x",
+            "c",
+            "v",
+            "b",
+            "n",
+            "m"});
             this.comboBoxLetterMark.Location = new System.Drawing.Point(343, 3);
             this.comboBoxLetterMark.Name = "comboBoxLetterMark";
             this.comboBoxLetterMark.Size = new System.Drawing.Size(627, 28);
@@ -383,9 +443,31 @@
             // 
             // comboBoxDigitMark
             // 
+            this.comboBoxDigitMark.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0"});
             this.comboBoxDigitMark.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxDigitMark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDigitMark.FormattingEnabled = true;
+            this.comboBoxDigitMark.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0"});
             this.comboBoxDigitMark.Location = new System.Drawing.Point(343, 3);
             this.comboBoxDigitMark.Name = "comboBoxDigitMark";
             this.comboBoxDigitMark.Size = new System.Drawing.Size(627, 28);
@@ -436,16 +518,15 @@
         private GroupBox groupBoxMouse;
         private TableLayoutPanel tableLayoutPanelMouse;
         private Label labelMouseButton;
-        private Label labelMouseClickType;
+        private Label labelMouseMilliseconds;
         private Label labelMouseOnOff;
         private ComboBox comboBoxMouseButton;
-        private ComboBox comboBoxMouseClickType;
         private GroupBox groupBoxLetter;
         private TableLayoutPanel tableLayoutPanelMark;
         private Label label1;
         private Label label3;
         private Label labelLetterOnOff;
-        private TextBox textBoxMilliseconds;
+        private TextBox textBoxLetterMilliseconds;
         private ComboBox comboBoxLetterMark;
         private GroupBox groupBoxDigit;
         private Label labelDigitMiliseconds;
@@ -456,5 +537,6 @@
         private CheckBox checkBoxMouseOnOff;
         private CheckBox checkBoxLetterOnOff;
         private CheckBox checkBoxDigitOnOff;
+        private TextBox textBoxMouseMilliseconds;
     }
 }

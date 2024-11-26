@@ -19,7 +19,6 @@ namespace AirAutoClicker.Forms
         string MouseButton { get; set; }
         int MouseMilliseconds { get; set; }
         bool MouseOnOff { get; set; }
-        int StartTime { get; set; }
 
         //Events
         event EventHandler btnStartClickEvent;
