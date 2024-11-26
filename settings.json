@@ -1,0 +1,14 @@
+{
+  "MainFormJsonSettings": {
+    "DigitMark": "1",
+    "DigitMilliseconds": 10000,
+    "DigitOnOff": false,
+    "LetterMark": "z",
+    "LetterMilliseconds": 10000,
+    "LetterOnOff": false,
+    "MouseButton": "Left",
+    "MouseMilliseconds": 10000,
+    "MouseOnOff": false,
+    "StartTime": 10000
+  }
+}
